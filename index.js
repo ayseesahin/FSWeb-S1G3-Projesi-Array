@@ -45,6 +45,8 @@ function kopyala(yeniOrijinalTatlar){
   return yeniOrijinalTatlarKopya;
 }
 
+console.log(orijinalTatlar);
+
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -55,7 +57,6 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 
 Örneğin: dizi25Cesit(orijinalTatlar) kodunuz düzgün çalışıyorsa true değerini döndürür.
 */
-
 
 function dizi25Cesitmi(kartonKutuKoli){
   if(kartonKutuKoli.lengt ==  25) {
@@ -169,11 +170,17 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(malzemelerListesi, filtrelenecek) {
+  let yeniBirDizi = [];
+  for (let i = 0; i < malzemelerListesi.lengt; i++) {
+    if (malzemelerListesi[i].includes(filtrelenecek)) {
+      yeniBirDizi.push(malzemelerListesi[i]);
+    }
+  }
+  console.log("yeniBirDizi", yeniBirDizi);
+  return yeniBirDizi;
 }
-
-
+ismeGoreFiltrele(orijinalTatlar, "Çikolata");
 
 /* ALIŞTIRMA */
 
@@ -194,7 +201,6 @@ function ortalamaKelimeSayisi(ortalamaDizi) {
   for (let i = 0; i < ortalamaDiziUzunluk; i++) {
     kelime_sayisi += ortalamaDizi[i].split(" ").length;
   }
-  
   return kelime_sayisi / ortalamaDiziUzunluk;
 }
 
@@ -211,49 +217,49 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 
   Örneğin: rastgeleTatlar(orijinalTatlar, yeniTatlar, mevsimlikTatlar, bolgeselTatlar) çalıştırıldığında ["Kestane", "Ballı Badem,"..."Hindistan Cevizi", "Kuru üzüm"].
 */
-
+ 
 
 function rastgeleTatlar(/*kod buraya*/){
-  /*kod buraya*/
-}
+  /*kod buraya*/}
+
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-// const yeniTatlar = [
-//   "Badem",
-//   "Ballı Badem",
-//   "Fıstık Ezmesi",
-//   "Profiterol",
-//   "Madlen Çikolata"
-// ]
+const yeniTatlar = [
+"Badem",
+"Ballı Badem",
+"Fıstık Ezmesi",
+"Profiterol",
+"Madlen Çikolata"
+]
 
-// const mevsimlikTatlar = [
-// "Pekan",
-// "Kaju",
-// "Çikolatalı Mousse",
-// "Fransız Vanilyası",
-// "Yumurta",
-// "Alman çikolatası",
-// "Kek üzerine krema",
-// "Hindistan Cevizi",
-// "Kaymaklı Biskuvi",
-// "Beyaz Çikolata",
-// "Mango"
-// ]
+const mevsimlikTatlar = [
+"Pekan",
+"Kaju",
+"Çikolatalı Mousse",
+"Fransız Vanilyası",
+"Yumurta",
+"Alman çikolatası",
+"Kek üzerine krema",
+"Hindistan Cevizi",
+"Kaymaklı Biskuvi",
+"Beyaz Çikolata",
+"Mango"
+ ]
 
-// const bolgeselTatlar = [
-// "Kaymak",
-// "Karpuz",
-// "Karadut",
-// "Turunç",
-// "Portakal",
-// "Yogurt",
-// "Krem Peynir",
-// "Kakao",
-// "Karamel macchiato",
-// "Kuru üzüm",
-// "Peynir",
-// "Karamel"
-// ]
+const bolgeselTatlar = [
+"Kaymak",
+"Karpuz",
+"Karadut",
+"Turunç",
+"Portakal",
+"Yogurt", 
+"Krem Peynir",
+"Kakao",
+"Karamel macchiato",
+"Kuru üzüm",
+"Peynir",
+"Karamel"
+]
 
 
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
