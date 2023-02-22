@@ -80,10 +80,13 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(tatlar) {
+  let ekle1 = 'Kakule';
+  tatlar.unshift(ekle1);
+  return tatlar;
 }
 
+console.log(cesitEkle(orijinalTatlar));
 
 /* Cörev 4:
 
@@ -98,8 +101,9 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(tatlar) {
+  tatlar.pop();
+  return tatlar;
 }
 
 
@@ -114,9 +118,12 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(tatlar, sayi1) {
+  let cesit = tatlar[sayi1];
+  return(cesit);
 }
+
+indekstekiCesitiGetir(orijinalTatlar,4);
 
 
 /* Görev 6:
@@ -180,10 +187,18 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
 
-function ortalamaKelimeSayisi(/*kod buraya*/){
-  /*kod buraya*/
+
+function ortalamaKelimeSayisi(ortalamaDizi) {
+  let kelime_sayisi = 0;
+  const ortalamaDiziUzunluk = ortalamaDizi.length;
+  for (let i = 0; i < ortalamaDiziUzunluk; i++) {
+    kelime_sayisi += ortalamaDizi[i].split(" ").length;
+  }
+  
+  return kelime_sayisi / ortalamaDiziUzunluk;
 }
 
+console.log(ortalamaKelimeSayisi(orijinalTatlar));
 
 /* ALIŞTIRMA 2:
 Firma mevcut tatların yanında artık mevsimlik lezzetler ve hatta bölgesel lezzetler de sunmaktadır. Toplam 25 lezzet aromasını
