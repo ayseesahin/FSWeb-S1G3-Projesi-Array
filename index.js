@@ -40,8 +40,9 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(yeniOrijinalTatlar){
+  let yeniOrijinalTatlarKopya = [...yeniOrijinalTatlar];
+  return yeniOrijinalTatlarKopya;
 }
 
 
@@ -56,8 +57,13 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(kartonKutuKoli){
+  if(kartonKutuKoli.lengt ==  25) {
+    return true;
+  } else {
+    return false;
+  }
+  console.log("25mi?", kartonKutuKoli.lengt);
 }
 
 
