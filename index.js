@@ -134,10 +134,12 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(tatlar, alerjen) {
+  const exitIndex = tatlar.indexOf(alerjen);
+  tatlar.splice(exitIndex, 1);
+  return  tatlar;
 }
-
+ismeGoreCesitCikar(orijinalTatlar, "Tarçın");
 
 /* Görev 7:
 
