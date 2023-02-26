@@ -58,13 +58,12 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 Örneğin: dizi25Cesit(orijinalTatlar) kodunuz düzgün çalışıyorsa true değerini döndürür.
 */
 
-function dizi25Cesitmi(kartonKutuKoli){
-  if(kartonKutuKoli.lengt ==  25) {
+function dizi25Cesitmi(kartonKutuKoli) {
+  if(kartonKutuKoli.length ==  25) {
     return true;
   } else {
     return false;
   }
-  console.log("25mi?", kartonKutuKoli.lengt);
 }
 console.log(dizi25Cesitmi(orijinalTatlar));
 
@@ -172,14 +171,14 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 
 
 function ismeGoreFiltrele(malzemelerListesi, filtrelenecek) {
-  let yeniBirDizi = [];
-  for (let i = 0; i < malzemelerListesi.lengt; i++) {
+  let yeniDizi = [];
+  for (let i = 0; i < malzemelerListesi.length; i++) {
     if (malzemelerListesi[i].includes(filtrelenecek)) {
-      yeniBirDizi.push(malzemelerListesi[i]);
+      yeniDizi.push(malzemelerListesi[i]);
     }
   }
-  console.log("yeniBirDizi", yeniBirDizi);
-  return yeniBirDizi;
+  console.log("yeniDizi", yeniDizi);
+  return yeniDizi;
 }
 ismeGoreFiltrele(orijinalTatlar, "Çikolata");
 
