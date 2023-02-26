@@ -66,7 +66,7 @@ function dizi25Cesitmi(kartonKutuKoli){
   }
   console.log("25mi?", kartonKutuKoli.lengt);
 }
-
+console.log(dizi25Cesitmi(orijinalTatlar));
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -107,6 +107,7 @@ function sonCesitiKaldir(tatlar) {
   return tatlar;
 }
 
+console.log(sonCesitiKaldir(orijinalTatlar));
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -124,7 +125,7 @@ function indekstekiCesitiGetir(tatlar, sayi1) {
   return(cesit);
 }
 
-indekstekiCesitiGetir(orijinalTatlar,4);
+indekstekiCesitiGetir(orijinalTatlar,2);
 
 
 /* Görev 6:
@@ -217,11 +218,7 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 
   Örneğin: rastgeleTatlar(orijinalTatlar, yeniTatlar, mevsimlikTatlar, bolgeselTatlar) çalıştırıldığında ["Kestane", "Ballı Badem,"..."Hindistan Cevizi", "Kuru üzüm"].
 */
- 
-
-function rastgeleTatlar(/*kod buraya*/){
-  /*kod buraya*/}
-
+ // en altta cevap
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const yeniTatlar = [
@@ -260,6 +257,17 @@ const bolgeselTatlar = [
 "Peynir",
 "Karamel"
 ]
+
+function rastgeleTatlar(dizi1, dizi2, dizi3, dizi4) {
+  let yenidizi =[];
+  let toplamdizi = [...dizi1, ...dizi2, ...dizi3, ...dizi4];
+  
+      for (let i = 0; i < 25; i++) {
+  yenidizi.push(toplamdizi[Math.round(Math.random() * toplamdizi.length)]);      
+  }
+   return (yenidizi);
+}
+console.log(rastgeleTatlar(orijinalTatlar, yeniTatlar, mevsimlikTatlar, bolgeselTatlar));
 
 
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
